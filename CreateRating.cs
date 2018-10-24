@@ -50,7 +50,7 @@ namespace Company.Function
             }
             var productResponse = await client.GetAsync($"https://serverlessohlondonproduct.azurewebsites.net/api/GetProduct?productId={userRating.productId}");
             if (!productResponse.IsSuccessStatusCode){
-                return new BadRequestObjectResult("Please pass a valid productId.");
+                return new BadRequestObjectResult("Please pass a valid productId !.");
             }
 
             if (!(userRating.rating >=0 && userRating.rating <=5)){
