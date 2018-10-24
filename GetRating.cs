@@ -28,7 +28,7 @@ namespace Company.Function
             ILogger log)
         {
             if (userRatings.Count() == 0){
-                return new BadRequestObjectResult("Please pass a valid ratingId.");
+                return new BadRequestObjectResult("Please pass a valid ratingId !.");
             }
             return (ActionResult)new OkObjectResult(userRatings.First());
         }
